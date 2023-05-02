@@ -18,6 +18,7 @@
 		DF3BE0FC29FC310F0014494A /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BE0FB29FC310F0014494A /* CleanArchitectureTests.swift */; };
 		DF3BE10629FC310F0014494A /* CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BE10529FC310F0014494A /* CleanArchitectureUITests.swift */; };
 		DF3BE10829FC310F0014494A /* CleanArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BE10729FC310F0014494A /* CleanArchitectureUITestsLaunchTests.swift */; };
+		DF9C7B1F29FD5A4700498BA1 /* GeneralRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9C7B1E29FD5A4700498BA1 /* GeneralRouters.swift */; };
 		DFB25E0C29FCA9A70095F94A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E0629FCA9A70095F94A /* MainPresenter.swift */; };
 		DFB25E0D29FCA9A70095F94A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E0729FCA9A70095F94A /* MainViewController.swift */; };
 		DFB25E0E29FCA9A70095F94A /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E0829FCA9A70095F94A /* MainInteractor.swift */; };
@@ -90,6 +91,7 @@
 		DF3BE10129FC310F0014494A /* CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3BE10529FC310F0014494A /* CleanArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITests.swift; sourceTree = "<group>"; };
 		DF3BE10729FC310F0014494A /* CleanArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF9C7B1E29FD5A4700498BA1 /* GeneralRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRouters.swift; sourceTree = "<group>"; };
 		DFB25E0629FCA9A70095F94A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		DFB25E0729FCA9A70095F94A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DFB25E0829FCA9A70095F94A /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				DFB25E4629FCAC060095F94A /* AppRoute.swift */,
+				DF9C7B1E29FD5A4700498BA1 /* GeneralRouters.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				DFB25E1829FCA9D30095F94A /* DetailPresenter.swift in Sources */,
 				DF3BE0E729FC310C0014494A /* SceneDelegate.swift in Sources */,
 				DFB25E3529FCAA4A0095F94A /* HomeWireframe.swift in Sources */,
+				DF9C7B1F29FD5A4700498BA1 /* GeneralRouters.swift in Sources */,
 				DFB25E3229FCAA4A0095F94A /* HomeInteractor.swift in Sources */,
 				DFB25E3E29FCAA7E0095F94A /* LoginInteractor.swift in Sources */,
 				DFB25E0F29FCA9A70095F94A /* MainModel.swift in Sources */,
