@@ -10,26 +10,20 @@ import UIKit
 class ViewController: UIViewController {
     
     var router: HomeRoutingLogic?
-    let detailViewController = DetailViewController()
+    // let detailViewController = DetailViewController()
     
-
+    
     @IBAction func detailButtonTapped(_ sender: Any) {
         router?.routeToDetail()
         print("opa")
-//        present(detailViewController, animated: true){
-//            print("Nova tela apresentada com sucesso!")
-//            
-//        }
-
-
+        //        present(detailViewController, animated: true){
+        //            print("Nova tela apresentada com sucesso!")
+        //        }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         router = HomeRouter(viewController: self)
-
+        
     }
-
-
 }
 
