@@ -18,7 +18,8 @@
 		DF3BE0FC29FC310F0014494A /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BE0FB29FC310F0014494A /* CleanArchitectureTests.swift */; };
 		DF3BE10629FC310F0014494A /* CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BE10529FC310F0014494A /* CleanArchitectureUITests.swift */; };
 		DF3BE10829FC310F0014494A /* CleanArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BE10729FC310F0014494A /* CleanArchitectureUITestsLaunchTests.swift */; };
-		DF9C7B1F29FD5A4700498BA1 /* GeneralRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9C7B1E29FD5A4700498BA1 /* GeneralRouters.swift */; };
+		DF7CEC8E2A01CA06005BC8B3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CEC8D2A01CA06005BC8B3 /* AppRouter.swift */; };
+		DF7CEC902A01CAA4005BC8B3 /* GeneralRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CEC8F2A01CAA4005BC8B3 /* GeneralRouter.swift */; };
 		DFB25E0C29FCA9A70095F94A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E0629FCA9A70095F94A /* MainPresenter.swift */; };
 		DFB25E0D29FCA9A70095F94A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E0729FCA9A70095F94A /* MainViewController.swift */; };
 		DFB25E0E29FCA9A70095F94A /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E0829FCA9A70095F94A /* MainInteractor.swift */; };
@@ -49,7 +50,6 @@
 		DFB25E3F29FCAA7E0095F94A /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E3929FCAA7E0095F94A /* LoginModel.swift */; };
 		DFB25E4029FCAA7E0095F94A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB25E3A29FCAA7E0095F94A /* LoginViewController.xib */; };
 		DFB25E4129FCAA7E0095F94A /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E3B29FCAA7E0095F94A /* LoginWireframe.swift */; };
-		DFB25E4729FCAC060095F94A /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25E4629FCAC060095F94A /* AppRoute.swift */; };
 		E88A8CE893E33644D7E6983B /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD452775985E0CEF6BB370E4 /* Pods_CleanArchitecture.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +91,8 @@
 		DF3BE10129FC310F0014494A /* CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3BE10529FC310F0014494A /* CleanArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITests.swift; sourceTree = "<group>"; };
 		DF3BE10729FC310F0014494A /* CleanArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DF9C7B1E29FD5A4700498BA1 /* GeneralRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRouters.swift; sourceTree = "<group>"; };
+		DF7CEC8D2A01CA06005BC8B3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		DF7CEC8F2A01CAA4005BC8B3 /* GeneralRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRouter.swift; sourceTree = "<group>"; };
 		DFB25E0629FCA9A70095F94A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		DFB25E0729FCA9A70095F94A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DFB25E0829FCA9A70095F94A /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		DFB25E3929FCAA7E0095F94A /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		DFB25E3A29FCAA7E0095F94A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DFB25E3B29FCAA7E0095F94A /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
-		DFB25E4629FCAC060095F94A /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		EF2F6FBBB95079D696EB4FE1 /* Pods-CleanArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA24CEE2D3EACA12F56338E0 /* Pods-CleanArchitectureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,8 +313,8 @@
 		DFB25E0529FC966E0095F94A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				DFB25E4629FCAC060095F94A /* AppRoute.swift */,
-				DF9C7B1E29FD5A4700498BA1 /* GeneralRouters.swift */,
+				DF7CEC8D2A01CA06005BC8B3 /* AppRouter.swift */,
+				DF7CEC8F2A01CAA4005BC8B3 /* GeneralRouter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -571,8 +571,8 @@
 				DF3BE0E529FC310C0014494A /* AppDelegate.swift in Sources */,
 				DFB25E1829FCA9D30095F94A /* DetailPresenter.swift in Sources */,
 				DF3BE0E729FC310C0014494A /* SceneDelegate.swift in Sources */,
+				DF7CEC8E2A01CA06005BC8B3 /* AppRouter.swift in Sources */,
 				DFB25E3529FCAA4A0095F94A /* HomeWireframe.swift in Sources */,
-				DF9C7B1F29FD5A4700498BA1 /* GeneralRouters.swift in Sources */,
 				DFB25E3229FCAA4A0095F94A /* HomeInteractor.swift in Sources */,
 				DFB25E3E29FCAA7E0095F94A /* LoginInteractor.swift in Sources */,
 				DFB25E0F29FCA9A70095F94A /* MainModel.swift in Sources */,
@@ -582,6 +582,7 @@
 				DFB25E2729FCA9F80095F94A /* ProfileModel.swift in Sources */,
 				DFB25E1929FCA9D30095F94A /* DetailViewController.swift in Sources */,
 				DFB25E2429FCA9F80095F94A /* ProfilePresenter.swift in Sources */,
+				DF7CEC902A01CAA4005BC8B3 /* GeneralRouter.swift in Sources */,
 				DFB25E4129FCAA7E0095F94A /* LoginWireframe.swift in Sources */,
 				DFB25E2929FCA9F80095F94A /* ProfileWireframe.swift in Sources */,
 				DFB25E0D29FCA9A70095F94A /* MainViewController.swift in Sources */,
@@ -592,7 +593,6 @@
 				DFB25E0E29FCA9A70095F94A /* MainInteractor.swift in Sources */,
 				DFB25E2629FCA9F80095F94A /* ProfileInteractor.swift in Sources */,
 				DFB25E1D29FCA9D30095F94A /* DetailWireframe.swift in Sources */,
-				DFB25E4729FCAC060095F94A /* AppRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
