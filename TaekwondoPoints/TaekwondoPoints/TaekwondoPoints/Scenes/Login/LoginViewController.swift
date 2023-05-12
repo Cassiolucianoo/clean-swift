@@ -18,12 +18,15 @@ protocol LoginDisplayLogic: class
 //    func displaySomethingElse(viewModel: Login.SomethingElse.ViewModel)
 }
 
+
+
+// MARK: - LoginViewController
 class LoginViewController: UIViewController, LoginDisplayLogic {
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
 
     // MARK: Object lifecycle
-
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -70,15 +73,21 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     
     //MARK: - receive events from UI
     
-    //@IBOutlet weak var nameTextField: UITextField!
-//
-//    @IBAction func someButtonTapped(_ sender: Any) {
-//
-//    }
-//
-//    @IBAction func otherButtonTapped(_ sender: Any) {
-//
-//    }
+    @IBOutlet private weak var nomeusuarioTextField: UITextField!
+    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var senhaSwitch: UISwitch!
+    
+    
+    // MARK: - IBActions
+    
+    @IBAction func login(_ sender: Any) {
+    }
+    
+    
+    @IBAction func cadastro(_ sender: Any) {
+    }
+    
+    
     
     // MARK: - request data from LoginInteractor
 
