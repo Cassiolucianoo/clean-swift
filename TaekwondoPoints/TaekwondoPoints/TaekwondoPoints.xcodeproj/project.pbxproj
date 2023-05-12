@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF3AB8CB2A0D47EB00B0AC93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */; };
+		DF3AB8CD2A0D47EB00B0AC93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */; };
+		DF3AB8CF2A0D47EB00B0AC93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */; };
+		DF3AB8D22A0D47EB00B0AC93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3AB8D02A0D47EB00B0AC93 /* Main.storyboard */; };
+		DF3AB8D42A0D47ED00B0AC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3AB8D32A0D47ED00B0AC93 /* Assets.xcassets */; };
+		DF3AB8D72A0D47ED00B0AC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3AB8D52A0D47ED00B0AC93 /* LaunchScreen.storyboard */; };
+		DF3AB8E22A0D47EE00B0AC93 /* TaekwondoPointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8E12A0D47EE00B0AC93 /* TaekwondoPointsTests.swift */; };
+		DF3AB8EC2A0D47EE00B0AC93 /* TaekwondoPointsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8EB2A0D47EE00B0AC93 /* TaekwondoPointsUITests.swift */; };
+		DF3AB8EE2A0D47EE00B0AC93 /* TaekwondoPointsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8ED2A0D47EE00B0AC93 /* TaekwondoPointsUITestsLaunchTests.swift */; };
+		DF73439A2A0DD78C007720AA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343942A0DD78C007720AA /* LoginPresenter.swift */; };
+		DF73439B2A0DD78C007720AA /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343952A0DD78C007720AA /* LoginWorker.swift */; };
+		DF73439C2A0DD78C007720AA /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343962A0DD78C007720AA /* LoginRouter.swift */; };
+		DF73439D2A0DD78C007720AA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343972A0DD78C007720AA /* LoginModels.swift */; };
+		DF73439E2A0DD78C007720AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343982A0DD78C007720AA /* LoginViewController.swift */; };
+		DF73439F2A0DD78C007720AA /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343992A0DD78C007720AA /* LoginInteractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF3AB8DE2A0D47EE00B0AC93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF3AB8BF2A0D47EB00B0AC93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF3AB8C62A0D47EB00B0AC93;
+			remoteInfo = TaekwondoPoints;
+		};
+		DF3AB8E82A0D47EE00B0AC93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF3AB8BF2A0D47EB00B0AC93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF3AB8C62A0D47EB00B0AC93;
+			remoteInfo = TaekwondoPoints;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF3AB8C72A0D47EB00B0AC93 /* TaekwondoPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaekwondoPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF3AB8D12A0D47EB00B0AC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF3AB8D32A0D47ED00B0AC93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF3AB8D62A0D47ED00B0AC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF3AB8D82A0D47ED00B0AC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF3AB8DD2A0D47EE00B0AC93 /* TaekwondoPointsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaekwondoPointsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3AB8E12A0D47EE00B0AC93 /* TaekwondoPointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaekwondoPointsTests.swift; sourceTree = "<group>"; };
+		DF3AB8E72A0D47EE00B0AC93 /* TaekwondoPointsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaekwondoPointsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3AB8EB2A0D47EE00B0AC93 /* TaekwondoPointsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaekwondoPointsUITests.swift; sourceTree = "<group>"; };
+		DF3AB8ED2A0D47EE00B0AC93 /* TaekwondoPointsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaekwondoPointsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF7343942A0DD78C007720AA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		DF7343952A0DD78C007720AA /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		DF7343962A0DD78C007720AA /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		DF7343972A0DD78C007720AA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		DF7343982A0DD78C007720AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DF7343992A0DD78C007720AA /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF3AB8C42A0D47EB00B0AC93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3AB8DA2A0D47EE00B0AC93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3AB8E42A0D47EE00B0AC93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF3AB8BE2A0D47EB00B0AC93 = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8C92A0D47EB00B0AC93 /* TaekwondoPoints */,
+				DF3AB8E02A0D47EE00B0AC93 /* TaekwondoPointsTests */,
+				DF3AB8EA2A0D47EE00B0AC93 /* TaekwondoPointsUITests */,
+				DF3AB8C82A0D47EB00B0AC93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF3AB8C82A0D47EB00B0AC93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8C72A0D47EB00B0AC93 /* TaekwondoPoints.app */,
+				DF3AB8DD2A0D47EE00B0AC93 /* TaekwondoPointsTests.xctest */,
+				DF3AB8E72A0D47EE00B0AC93 /* TaekwondoPointsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF3AB8C92A0D47EB00B0AC93 /* TaekwondoPoints */ = {
+			isa = PBXGroup;
+			children = (
+				DF7343902A0DD568007720AA /* Scenes */,
+				DF7343922A0DD61A007720AA /* Storybords */,
+				DF7343912A0DD5CD007720AA /* Application */,
+				DF7343932A0DD656007720AA /* Supporting files */,
+				DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */,
+				DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */,
+			);
+			path = TaekwondoPoints;
+			sourceTree = "<group>";
+		};
+		DF3AB8E02A0D47EE00B0AC93 /* TaekwondoPointsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8E12A0D47EE00B0AC93 /* TaekwondoPointsTests.swift */,
+			);
+			path = TaekwondoPointsTests;
+			sourceTree = "<group>";
+		};
+		DF3AB8EA2A0D47EE00B0AC93 /* TaekwondoPointsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8EB2A0D47EE00B0AC93 /* TaekwondoPointsUITests.swift */,
+				DF3AB8ED2A0D47EE00B0AC93 /* TaekwondoPointsUITestsLaunchTests.swift */,
+			);
+			path = TaekwondoPointsUITests;
+			sourceTree = "<group>";
+		};
+		DF73438F2A0DD4CC007720AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DF7343942A0DD78C007720AA /* LoginPresenter.swift */,
+				DF7343952A0DD78C007720AA /* LoginWorker.swift */,
+				DF7343962A0DD78C007720AA /* LoginRouter.swift */,
+				DF7343972A0DD78C007720AA /* LoginModels.swift */,
+				DF7343982A0DD78C007720AA /* LoginViewController.swift */,
+				DF7343992A0DD78C007720AA /* LoginInteractor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DF7343902A0DD568007720AA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DF73438F2A0DD4CC007720AA /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DF7343912A0DD5CD007720AA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DF7343922A0DD61A007720AA /* Storybords */ = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8D02A0D47EB00B0AC93 /* Main.storyboard */,
+				DF3AB8D52A0D47ED00B0AC93 /* LaunchScreen.storyboard */,
+			);
+			path = Storybords;
+			sourceTree = "<group>";
+		};
+		DF7343932A0DD656007720AA /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				DF3AB8D32A0D47ED00B0AC93 /* Assets.xcassets */,
+				DF3AB8D82A0D47ED00B0AC93 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF3AB8C62A0D47EB00B0AC93 /* TaekwondoPoints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF3AB8F12A0D47EE00B0AC93 /* Build configuration list for PBXNativeTarget "TaekwondoPoints" */;
+			buildPhases = (
+				DF3AB8C32A0D47EB00B0AC93 /* Sources */,
+				DF3AB8C42A0D47EB00B0AC93 /* Frameworks */,
+				DF3AB8C52A0D47EB00B0AC93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaekwondoPoints;
+			productName = TaekwondoPoints;
+			productReference = DF3AB8C72A0D47EB00B0AC93 /* TaekwondoPoints.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF3AB8DC2A0D47EE00B0AC93 /* TaekwondoPointsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF3AB8F42A0D47EE00B0AC93 /* Build configuration list for PBXNativeTarget "TaekwondoPointsTests" */;
+			buildPhases = (
+				DF3AB8D92A0D47EE00B0AC93 /* Sources */,
+				DF3AB8DA2A0D47EE00B0AC93 /* Frameworks */,
+				DF3AB8DB2A0D47EE00B0AC93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF3AB8DF2A0D47EE00B0AC93 /* PBXTargetDependency */,
+			);
+			name = TaekwondoPointsTests;
+			productName = TaekwondoPointsTests;
+			productReference = DF3AB8DD2A0D47EE00B0AC93 /* TaekwondoPointsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF3AB8E62A0D47EE00B0AC93 /* TaekwondoPointsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF3AB8F72A0D47EE00B0AC93 /* Build configuration list for PBXNativeTarget "TaekwondoPointsUITests" */;
+			buildPhases = (
+				DF3AB8E32A0D47EE00B0AC93 /* Sources */,
+				DF3AB8E42A0D47EE00B0AC93 /* Frameworks */,
+				DF3AB8E52A0D47EE00B0AC93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF3AB8E92A0D47EE00B0AC93 /* PBXTargetDependency */,
+			);
+			name = TaekwondoPointsUITests;
+			productName = TaekwondoPointsUITests;
+			productReference = DF3AB8E72A0D47EE00B0AC93 /* TaekwondoPointsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF3AB8BF2A0D47EB00B0AC93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DF3AB8C62A0D47EB00B0AC93 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					DF3AB8DC2A0D47EE00B0AC93 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = DF3AB8C62A0D47EB00B0AC93;
+					};
+					DF3AB8E62A0D47EE00B0AC93 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = DF3AB8C62A0D47EB00B0AC93;
+					};
+				};
+			};
+			buildConfigurationList = DF3AB8C22A0D47EB00B0AC93 /* Build configuration list for PBXProject "TaekwondoPoints" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF3AB8BE2A0D47EB00B0AC93;
+			productRefGroup = DF3AB8C82A0D47EB00B0AC93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF3AB8C62A0D47EB00B0AC93 /* TaekwondoPoints */,
+				DF3AB8DC2A0D47EE00B0AC93 /* TaekwondoPointsTests */,
+				DF3AB8E62A0D47EE00B0AC93 /* TaekwondoPointsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF3AB8C52A0D47EB00B0AC93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3AB8D72A0D47ED00B0AC93 /* LaunchScreen.storyboard in Resources */,
+				DF3AB8D42A0D47ED00B0AC93 /* Assets.xcassets in Resources */,
+				DF3AB8D22A0D47EB00B0AC93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3AB8DB2A0D47EE00B0AC93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3AB8E52A0D47EE00B0AC93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF3AB8C32A0D47EB00B0AC93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF73439B2A0DD78C007720AA /* LoginWorker.swift in Sources */,
+				DF73439A2A0DD78C007720AA /* LoginPresenter.swift in Sources */,
+				DF73439D2A0DD78C007720AA /* LoginModels.swift in Sources */,
+				DF73439C2A0DD78C007720AA /* LoginRouter.swift in Sources */,
+				DF73439E2A0DD78C007720AA /* LoginViewController.swift in Sources */,
+				DF3AB8CF2A0D47EB00B0AC93 /* ViewController.swift in Sources */,
+				DF3AB8CB2A0D47EB00B0AC93 /* AppDelegate.swift in Sources */,
+				DF3AB8CD2A0D47EB00B0AC93 /* SceneDelegate.swift in Sources */,
+				DF73439F2A0DD78C007720AA /* LoginInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3AB8D92A0D47EE00B0AC93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3AB8E22A0D47EE00B0AC93 /* TaekwondoPointsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3AB8E32A0D47EE00B0AC93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3AB8EE2A0D47EE00B0AC93 /* TaekwondoPointsUITestsLaunchTests.swift in Sources */,
+				DF3AB8EC2A0D47EE00B0AC93 /* TaekwondoPointsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF3AB8DF2A0D47EE00B0AC93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF3AB8C62A0D47EB00B0AC93 /* TaekwondoPoints */;
+			targetProxy = DF3AB8DE2A0D47EE00B0AC93 /* PBXContainerItemProxy */;
+		};
+		DF3AB8E92A0D47EE00B0AC93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF3AB8C62A0D47EB00B0AC93 /* TaekwondoPoints */;
+			targetProxy = DF3AB8E82A0D47EE00B0AC93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF3AB8D02A0D47EB00B0AC93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF3AB8D12A0D47EB00B0AC93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF3AB8D52A0D47ED00B0AC93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF3AB8D62A0D47ED00B0AC93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF3AB8EF2A0D47EE00B0AC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF3AB8F02A0D47EE00B0AC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF3AB8F22A0D47EE00B0AC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaekwondoPoints/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassio.TaekwondoPoints;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF3AB8F32A0D47EE00B0AC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaekwondoPoints/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassio.TaekwondoPoints;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF3AB8F52A0D47EE00B0AC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassio.TaekwondoPointsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaekwondoPoints.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TaekwondoPoints";
+			};
+			name = Debug;
+		};
+		DF3AB8F62A0D47EE00B0AC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassio.TaekwondoPointsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaekwondoPoints.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TaekwondoPoints";
+			};
+			name = Release;
+		};
+		DF3AB8F82A0D47EE00B0AC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassio.TaekwondoPointsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaekwondoPoints;
+			};
+			name = Debug;
+		};
+		DF3AB8F92A0D47EE00B0AC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassio.TaekwondoPointsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaekwondoPoints;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF3AB8C22A0D47EB00B0AC93 /* Build configuration list for PBXProject "TaekwondoPoints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3AB8EF2A0D47EE00B0AC93 /* Debug */,
+				DF3AB8F02A0D47EE00B0AC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF3AB8F12A0D47EE00B0AC93 /* Build configuration list for PBXNativeTarget "TaekwondoPoints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3AB8F22A0D47EE00B0AC93 /* Debug */,
+				DF3AB8F32A0D47EE00B0AC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF3AB8F42A0D47EE00B0AC93 /* Build configuration list for PBXNativeTarget "TaekwondoPointsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3AB8F52A0D47EE00B0AC93 /* Debug */,
+				DF3AB8F62A0D47EE00B0AC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF3AB8F72A0D47EE00B0AC93 /* Build configuration list for PBXNativeTarget "TaekwondoPointsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3AB8F82A0D47EE00B0AC93 /* Debug */,
+				DF3AB8F92A0D47EE00B0AC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF3AB8BF2A0D47EB00B0AC93 /* Project object */;
+}
