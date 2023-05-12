@@ -23,6 +23,12 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
 
     // MARK: Object lifecycle
+    
+    // MARK: - Propriedades
+    
+    @IBAction func nomeusuarioTextField(_ sender: Any) {
+    }
+    
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
