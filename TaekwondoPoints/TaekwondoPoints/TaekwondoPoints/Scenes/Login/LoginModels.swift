@@ -18,20 +18,39 @@ enum Login
 
     enum Something
     {
-        struct Request
-        {
-
-        }
+        struct Request{}
 
         struct Response
         {
-
+            let lembrarNomeusuario: Bool
+            let nomeusuario: String?
         }
 
         struct ViewModel
         {
-
+            let lembrarMeIsOn: Bool
+            let nomeusuarioText: String?
         }
+    }
+    
+    enum Autenticacao{
+        
+        struct Solicitar {
+            let usuarionome: String?
+            let senha: String?
+            let amarzenarLogin: Bool
+        }
+        
+        struct Resposta {
+            let error: LoginError?
+        }
+        
+    }
+    
+    enum LoginError: Error {
+        case missingCredentials
+        case loginFailed(String)
+        case registerFailed(String)
     }
     
 //    enum SomethingElse

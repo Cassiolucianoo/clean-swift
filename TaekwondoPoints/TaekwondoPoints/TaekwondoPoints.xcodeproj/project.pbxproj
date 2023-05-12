@@ -22,6 +22,7 @@
 		DF73439D2A0DD78C007720AA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343972A0DD78C007720AA /* LoginModels.swift */; };
 		DF73439E2A0DD78C007720AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343982A0DD78C007720AA /* LoginViewController.swift */; };
 		DF73439F2A0DD78C007720AA /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343992A0DD78C007720AA /* LoginInteractor.swift */; };
+		DF7343A12A0DE9FF007720AA /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343A02A0DE9FF007720AA /* LoginProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DF7343972A0DD78C007720AA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		DF7343982A0DD78C007720AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF7343992A0DD78C007720AA /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		DF7343A02A0DE9FF007720AA /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				DF7343932A0DD656007720AA /* Supporting files */,
 				DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */,
 				DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */,
+				DF3AB8D82A0D47ED00B0AC93 /* Info.plist */,
 			);
 			path = TaekwondoPoints;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 		DF73438F2A0DD4CC007720AA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DF7343A02A0DE9FF007720AA /* LoginProtocols.swift */,
 				DF7343942A0DD78C007720AA /* LoginPresenter.swift */,
 				DF7343952A0DD78C007720AA /* LoginWorker.swift */,
 				DF7343962A0DD78C007720AA /* LoginRouter.swift */,
@@ -180,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				DF3AB8D32A0D47ED00B0AC93 /* Assets.xcassets */,
-				DF3AB8D82A0D47ED00B0AC93 /* Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF73439B2A0DD78C007720AA /* LoginWorker.swift in Sources */,
+				DF7343A12A0DE9FF007720AA /* LoginProtocols.swift in Sources */,
 				DF73439A2A0DD78C007720AA /* LoginPresenter.swift in Sources */,
 				DF73439D2A0DD78C007720AA /* LoginModels.swift in Sources */,
 				DF73439C2A0DD78C007720AA /* LoginRouter.swift in Sources */,
