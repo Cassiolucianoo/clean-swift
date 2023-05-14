@@ -12,13 +12,6 @@
 
 import UIKit
 
-protocol LoginDisplayLogic: class
-{
-    func displaySomething(viewModel: Login.Something.ViewModel)
-//    func displaySomethingElse(viewModel: Login.SomethingElse.ViewModel)
-}
-
-
 
 // MARK: - LoginViewController
 class LoginViewController: UIViewController, LoginDisplayLogic {
@@ -67,7 +60,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        loadCredentials()
 //        doSomethingElse()
     }
     
@@ -77,10 +70,17 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var senhaSwitch: UISwitch!
     
+    var interactor: LoginInteractor
+    
     
     // MARK: - IBActions
     
     @IBAction func login(_ sender: Any) {
+        
+        //mostrarLoadingView()
+        let request = Login.Autenticacao.Solicitar(usuarionome: nomeusuarioTextField.text, senha: senhaTextField.text, amarzenarLogin: senhaSwitch.isOn)
+        interactor.login(request: request)
+        
     }
     
     
@@ -91,7 +91,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     
     // MARK: - request data from LoginInteractor
 
-    func doSomething() {
+    func loadCredentials() {
         let request = Login.Something.Request()
         interactor?.doSomething(request: request)
     }

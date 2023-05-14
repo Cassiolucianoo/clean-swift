@@ -26,9 +26,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="nomeusuarioTextField:" destination="dDG-T6-T7q" eventType="editingDidEnd" id="uKb-sE-sRr"/>
-                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1IB-Ls-ZTQ">
                                                 <rect key="frame" x="0.0" y="34" width="353" height="34"/>
@@ -100,7 +97,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="dDG-T6-T7q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="140" y="-2"/>
         </scene>

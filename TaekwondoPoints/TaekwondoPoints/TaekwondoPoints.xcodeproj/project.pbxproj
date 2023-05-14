@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2D670B2A107AB60020D346 /* TaeKondoPontosKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D670A2A107AB60020D346 /* TaeKondoPontosKeychain.swift */; };
 		DF3AB8CB2A0D47EB00B0AC93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */; };
 		DF3AB8CD2A0D47EB00B0AC93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */; };
 		DF3AB8CF2A0D47EB00B0AC93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		DF73439D2A0DD78C007720AA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343972A0DD78C007720AA /* LoginModels.swift */; };
 		DF73439E2A0DD78C007720AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343982A0DD78C007720AA /* LoginViewController.swift */; };
 		DF73439F2A0DD78C007720AA /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343992A0DD78C007720AA /* LoginInteractor.swift */; };
+		DF7343A12A0DE9FF007720AA /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7343A02A0DE9FF007720AA /* LoginProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF2D670A2A107AB60020D346 /* TaeKondoPontosKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaeKondoPontosKeychain.swift; sourceTree = "<group>"; };
 		DF3AB8C72A0D47EB00B0AC93 /* TaekwondoPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaekwondoPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		DF7343972A0DD78C007720AA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		DF7343982A0DD78C007720AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF7343992A0DD78C007720AA /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		DF7343A02A0DE9FF007720AA /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF2D67092A107A760020D346 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				DF2D670A2A107AB60020D346 /* TaeKondoPontosKeychain.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		DF3AB8BE2A0D47EB00B0AC93 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +129,7 @@
 				DF7343932A0DD656007720AA /* Supporting files */,
 				DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */,
 				DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */,
+				DF3AB8D82A0D47ED00B0AC93 /* Info.plist */,
 			);
 			path = TaekwondoPoints;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 		DF73438F2A0DD4CC007720AA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DF7343A02A0DE9FF007720AA /* LoginProtocols.swift */,
 				DF7343942A0DD78C007720AA /* LoginPresenter.swift */,
 				DF7343952A0DD78C007720AA /* LoginWorker.swift */,
 				DF7343962A0DD78C007720AA /* LoginRouter.swift */,
@@ -154,6 +168,7 @@
 		DF7343902A0DD568007720AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DF2D67092A107A760020D346 /* Storage */,
 				DF73438F2A0DD4CC007720AA /* Login */,
 			);
 			path = Scenes;
@@ -180,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				DF3AB8D32A0D47ED00B0AC93 /* Assets.xcassets */,
-				DF3AB8D82A0D47ED00B0AC93 /* Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -316,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2D670B2A107AB60020D346 /* TaeKondoPontosKeychain.swift in Sources */,
 				DF73439B2A0DD78C007720AA /* LoginWorker.swift in Sources */,
+				DF7343A12A0DE9FF007720AA /* LoginProtocols.swift in Sources */,
 				DF73439A2A0DD78C007720AA /* LoginPresenter.swift in Sources */,
 				DF73439D2A0DD78C007720AA /* LoginModels.swift in Sources */,
 				DF73439C2A0DD78C007720AA /* LoginRouter.swift in Sources */,
