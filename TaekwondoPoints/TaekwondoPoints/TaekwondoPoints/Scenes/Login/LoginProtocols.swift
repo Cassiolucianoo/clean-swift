@@ -8,6 +8,15 @@
 import Foundation
 
 
+typealias LoginInteractorProtocol = LoginInteractable
+
+// MARK: - Interactor
+typealias LoginInteractorProtocol = LoginInteractable 
+
+protocol LoginInteractable: AnyObject {
+    //var presenter: LoginPresenterProtocol { get set }
+}
+
 protocol LoginDisplayLogic: AnyObject
 {
     func displaySomething(viewModel: Login.Something.ViewModel)

@@ -24,6 +24,8 @@ protocol LoginDataStore {
 class LoginInteractor: LoginBusinessLogic, LoginDataStore {
     var presenter: LoginPresentationLogic?
     var worker: LoginWorker?
+    private let keychain: TaeKondoPontosKeychain
+    
     //var name: String = ""
 
     // MARK: Do something (and send response to LoginPresenter)
@@ -31,16 +33,15 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
     func doSomething(request: Login.Something.Request) {
         worker = LoginWorker()
         worker?.doSomeWork()
-
-        let response = Login.Something.Response()
-        presenter?.presentSomething(response: response)
-    }
-//
-//    func doSomethingElse(request: Login.SomethingElse.Request) {
-//        worker = LoginWorker()
-//        worker?.doSomeOtherWork()
-//
-//        let response = Login.SomethingElse.Response()
-//        presenter?.presentSomethingElse(response: response)
-//    }
+        let rememberUsername = userDefaults.rememberUsername ?? true
+        let username = keychain.username
+        let response = Login.LoadCredentials.Response(lembrarNomeusuario: rememberUsername, nomeusuario: username)
+        presenter.presentCredentials(response: response)
+ 
+    func login(request: Login.Autenticacao.Solicitar) {
+        guard let username = request.usuarionome, let password = request.senha else {
+            let response = Login.Autenticacao.Resposta(error: .missingCredentials)
+            //presenter.authenticationCompleted(response: response)
+            return
+        }
 }

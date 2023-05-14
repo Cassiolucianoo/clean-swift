@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2D670B2A107AB60020D346 /* TaeKondoPontosKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D670A2A107AB60020D346 /* TaeKondoPontosKeychain.swift */; };
 		DF3AB8CB2A0D47EB00B0AC93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */; };
 		DF3AB8CD2A0D47EB00B0AC93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */; };
 		DF3AB8CF2A0D47EB00B0AC93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AB8CE2A0D47EB00B0AC93 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF2D670A2A107AB60020D346 /* TaeKondoPontosKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaeKondoPontosKeychain.swift; sourceTree = "<group>"; };
 		DF3AB8C72A0D47EB00B0AC93 /* TaekwondoPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaekwondoPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3AB8CA2A0D47EB00B0AC93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF3AB8CC2A0D47EB00B0AC93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF2D67092A107A760020D346 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				DF2D670A2A107AB60020D346 /* TaeKondoPontosKeychain.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		DF3AB8BE2A0D47EB00B0AC93 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		DF7343902A0DD568007720AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DF2D67092A107A760020D346 /* Storage */,
 				DF73438F2A0DD4CC007720AA /* Login */,
 			);
 			path = Scenes;
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2D670B2A107AB60020D346 /* TaeKondoPontosKeychain.swift in Sources */,
 				DF73439B2A0DD78C007720AA /* LoginWorker.swift in Sources */,
 				DF7343A12A0DE9FF007720AA /* LoginProtocols.swift in Sources */,
 				DF73439A2A0DD78C007720AA /* LoginPresenter.swift in Sources */,

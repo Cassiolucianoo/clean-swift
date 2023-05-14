@@ -15,17 +15,17 @@ import UIKit
 enum Login
 {
     // MARK: Use cases
-
-    enum Something
+    
+    enum LoadCredentials
     {
         struct Request{}
-
+        
         struct Response
         {
             let lembrarNomeusuario: Bool
             let nomeusuario: String?
         }
-
+        
         struct ViewModel
         {
             let lembrarMeIsOn: Bool
@@ -53,21 +53,4 @@ enum Login
         case registerFailed(String)
     }
     
-//    enum SomethingElse
-//    {
-//        struct Request
-//        {
-//
-//        }
-//
-//        struct Response
-//        {
-//
-//        }
-//
-//        struct ViewModel
-//        {
-//
-//        }
-//    }
 }

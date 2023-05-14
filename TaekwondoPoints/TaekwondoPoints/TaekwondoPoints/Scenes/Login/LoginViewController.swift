@@ -70,6 +70,8 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var senhaSwitch: UISwitch!
     
+    var interactor: LoginInteractor
+    
     
     // MARK: - IBActions
     
@@ -77,7 +79,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
         
         //mostrarLoadingView()
         let request = Login.Autenticacao.Solicitar(usuarionome: nomeusuarioTextField.text, senha: senhaTextField.text, amarzenarLogin: senhaSwitch.isOn)
-        interactor.lo
+        interactor.login(request: request)
         
     }
     
