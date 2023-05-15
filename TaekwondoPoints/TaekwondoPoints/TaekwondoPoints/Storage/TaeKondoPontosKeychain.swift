@@ -33,12 +33,12 @@ final class TaeKondoPontosKeychain{
         static let token = "footballgather_token"
     }
     
-   // let storage: KeyValueStorage
-   // static let shared: FootbalGatherKeychain = .init()
+   let storage: KeyValueStorage
+    static let shared: TaeKondoPontosKeychain = .init()
     
-   // init(storage: KeyValueStorage = KeychainWrapper()) {
-    //    self.storage = storage
-    //}
+    init(storage: KeyValueStorage = KeychainWrapper()) {
+        self.storage = storage
+   }
     
 }
 
@@ -46,39 +46,39 @@ extension TaeKondoPontosKeychain: ApplicationKeychain {
     
     var username: String? {
         get {
-           // return storage.string(forKey: Keys.username)
+            return storage.string(forKey: Keys.username)
         }
         set {
             if let newValue = newValue {
-              //  storage.set(newValue, key: Keys.username)
+                storage.set(newValue, key: Keys.username)
             } else {
-              //  storage.removeValue(forKey: Keys.username)
+               storage.removeValue(forKey: Keys.username)
             }
         }
     }
     
     var password: String? {
         get {
-           // return storage.string(forKey: Keys.password)
+            return storage.string(forKey: Keys.password)
         }
         set {
             if let newValue = newValue {
-               // storage.set(newValue, key: Keys.password)
+               storage.set(newValue, key: Keys.password)
             } else {
-               // storage.removeValue(forKey: Keys.password)
+                storage.removeValue(forKey: Keys.password)
             }
         }
     }
     
     var token: String? {
         get {
-           // return storage.string(forKey: Keys.token)
+            return storage.string(forKey: Keys.token)
         }
         set {
             if let newValue = newValue {
-              //  storage.set(newValue, key: Keys.token)
+                storage.set(newValue, key: Keys.token)
             } else {
-                //storage.removeValue(forKey: Keys.token)
+                storage.removeValue(forKey: Keys.token)
             }
         }
     }

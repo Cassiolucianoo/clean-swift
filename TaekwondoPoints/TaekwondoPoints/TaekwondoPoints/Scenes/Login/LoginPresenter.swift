@@ -10,24 +10,56 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
-protocol LoginPresentationLogic {
-    func presentSomething(response: Login.Something.Response)
+
+// MARK:- LoginPresenter
+final class LoginPresenter: LoginPresentable {
+    
+    // MARK: - Properties
+    weak var view: LoginViewProtocol?
+    
+    // MARK: - Public API
+    init(view: LoginViewProtocol? = nil) {
+        self.view = view
+    }
+    
 }
 
-class LoginPresenter: LoginPresentationLogic {
-    weak var viewController: LoginDisplayLogic?
-
-    // MARK: Parse and calc respnse from LoginInteractor and send simple view model to LoginViewController to be displayed
-
-    func presentSomething(response: Login.Something.Response) {
-        let viewModel = Login.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+// MARK: - Service Handler
+extension LoginPresenter: LoginPresenterServiceHandler {
+    func presentCredentials(response: Login.LoadCredentials.Response) {
+        let viewModel = Login.LoadCredentials.ViewModel(lembrarMeIsOn: response.lembrarNomeusuario,
+                                                        nomeusuarioText: response.nomeusuario)
+        view?.displayStoredCredentials(viewModel: viewModel)
     }
-//
-//    func presentSomethingElse(response: Login.SomethingElse.Response) {
-//        let viewModel = Login.SomethingElse.ViewModel()
-//        viewController?.displaySomethingElse(viewModel: viewModel)
-//    }
+    
+    func authenticationCompleted(response: Login.Autenticacao.Resposta) {
+        guard response.error == nil else {
+            handleServiceError(response.error)
+            return
+        }
+        
+        let viewModel = Login.Autenticacao.ViewModel(isSuccessful: true, errorTitle: nil, errorDescription: nil)
+        view?.loginCompleted(viewModel: viewModel)
+    }
+    
+    private func handleServiceError(_ error: LoginError?) {
+        switch error {
+        case .missingCredentials:
+            let viewModel = Login.Autenticacao.ViewModel(isSuccessful: false,
+                                                         errorTitle: "Error",
+                                                         errorDescription: "Both fields are mandatory.")
+            view?.loginCompleted(viewModel: viewModel)
+            
+        case .loginFailed(let message), .registerFailed(let message):
+            let viewModel = Login.Autenticacao.ViewModel(isSuccessful: false,
+                                                         errorTitle: "Error",
+                                                         errorDescription: String(describing: message))
+            view?.loginCompleted(viewModel: viewModel)
+            
+        default:
+            break
+        }
+    }
 }

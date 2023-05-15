@@ -44,13 +44,18 @@ enum Login
         struct Resposta {
             let error: LoginError?
         }
+        struct ViewModel {
+            let isSuccessful: Bool
+            let errorTitle: String?
+            let errorDescription: String?
+        }
         
     }
     
-    enum LoginError: Error {
-        case missingCredentials
-        case loginFailed(String)
-        case registerFailed(String)
-    }
-    
+}
+
+enum LoginError: Error {
+    case missingCredentials
+    case loginFailed(String)
+    case registerFailed(String)
 }

@@ -14,54 +14,41 @@ import UIKit
 
 
 // MARK: - LoginViewController
-class LoginViewController: UIViewController, LoginDisplayLogic {
-    var interactor: LoginBusinessLogic?
-    var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
+final class LoginViewController: UIViewController, LoginViewable {
+    
+    
 
+    var interactor: LoginInteractorProtocol = LoginInteractor()
+    var router: LoginRouterProtocol = LoginRouter()
+    
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
+     
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        
     }
 
-    // MARK: - Setup Clean Code Design Pattern 
 
-    private func setup() {
-        let viewController = self
-        let interactor = LoginInteractor()
-        let presenter = LoginPresenter()
-        let router = LoginRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
-    }
 
-    // MARK: - Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
 
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCredentials()
-//        doSomethingElse()
+
+    }
+    
+    
+    private func loadCredentials() {
+        let request = Login.LoadCredentials.Request()
+        interactor.loadCredentials(request: request)
     }
     
     //MARK: - receive events from UI
@@ -70,7 +57,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var senhaSwitch: UISwitch!
     
-    var interactor: LoginInteractor
+
     
     
     // MARK: - IBActions
@@ -78,36 +65,21 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     @IBAction func login(_ sender: Any) {
         
         //mostrarLoadingView()
-        let request = Login.Autenticacao.Solicitar(usuarionome: nomeusuarioTextField.text, senha: senhaTextField.text, amarzenarLogin: senhaSwitch.isOn)
+        let request = Login.Autenticacao.Solicitar(usuarionome: nomeusuarioTextField.text,
+                                                  senha: senhaTextField.text,
+                                                  amarzenarLogin: senhaSwitch.isOn)
         interactor.login(request: request)
         
     }
     
     
     @IBAction func cadastro(_ sender: Any) {
+        
+        let request = Login.Autenticacao.Solicitar(usuarionome: nomeusuarioTextField.text,
+                                                 senha: senhaTextField.text,
+                                                 amarzenarLogin: senhaSwitch.isOn)
+        interactor.register(request: request)
     }
     
-    
-    
-    // MARK: - request data from LoginInteractor
-
-    func loadCredentials() {
-        let request = Login.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-//
-//    func doSomethingElse() {
-//        let request = Login.SomethingElse.Request()
-//        interactor?.doSomethingElse(request: request)
-//    }
-
-    // MARK: - display view model from LoginPresenter
-
-    func displaySomething(viewModel: Login.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
-    }
-//
-//    func displaySomethingElse(viewModel: Login.SomethingElse.ViewModel) {
-//        // do sometingElse with viewModel
-//    }
 }
+

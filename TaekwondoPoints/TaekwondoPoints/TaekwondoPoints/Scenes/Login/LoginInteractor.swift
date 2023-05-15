@@ -10,38 +10,111 @@
 //  see http://clean-swift.com
 //
 
+import Foundation
 import UIKit
 
-protocol LoginBusinessLogic {
-    func doSomething(request: Login.Something.Request)
-//    func doSomethingElse(request: Login.SomethingElse.Request)
-}
-
-protocol LoginDataStore {
-    //var name: String { get set }
-}
-
-class LoginInteractor: LoginBusinessLogic, LoginDataStore {
-    var presenter: LoginPresentationLogic?
-    var worker: LoginWorker?
+// MARK: - LoginInteractor
+final class LoginInteractor: LoginInteractable {
+    
+    var presenter: LoginPresenterProtocol
+    
+    private let loginService: LoginService
+    private let usersService: StandardNetworkService
+    private let userDefaults: TaekwondoUserDefaults
     private let keychain: TaeKondoPontosKeychain
     
-    //var name: String = ""
+    init(presenter: LoginPresenterProtocol = LoginPresenter(),
+         loginService: LoginService = LoginService(),
+         usersService: StandardNetworkService = StandardNetworkService(resourcePath: "/api/users"),
+         userDefaults: TaekwondoUserDefaults = .shared,
+         keychain: TaeKondoPontosKeychain = .shared) {
+        self.presenter = presenter
+        self.loginService = loginService
+        self.usersService = usersService
+        self.userDefaults = userDefaults
+        self.keychain = keychain
+    }
+    
+}
 
-    // MARK: Do something (and send response to LoginPresenter)
-
-    func doSomething(request: Login.Something.Request) {
-        worker = LoginWorker()
-        worker?.doSomeWork()
+// MARK: - Services
+extension LoginInteractor: LoginInteractorServiceRequester {
+    func login(request: Login.Autenticacao.Resposta) {
+        
+    }
+    
+    func register(request: Login.Autenticacao.Resposta) {
+     
+    }
+    
+    func loadCredentials(request: Login.LoadCredentials.Request) {
         let rememberUsername = userDefaults.rememberUsername ?? true
         let username = keychain.username
         let response = Login.LoadCredentials.Response(lembrarNomeusuario: rememberUsername, nomeusuario: username)
         presenter.presentCredentials(response: response)
- 
+    }
+    
     func login(request: Login.Autenticacao.Solicitar) {
-        guard let username = request.usuarionome, let password = request.senha else {
+        guard let username = request.usuarionome , let password = request.senha else {
             let response = Login.Autenticacao.Resposta(error: .missingCredentials)
-            //presenter.authenticationCompleted(response: response)
+            presenter.authenticationCompleted(response: response)
             return
         }
+        
+        let requestModel = UserRequestModel(username: username, password: password)
+        loginService.login(user: requestModel) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    let response = Login.Autenticacao.Resposta(error: .loginFailed(error.localizedDescription))
+                    self?.presenter.authenticationCompleted(response: response)
+                    
+                case .success(_):
+                    guard let self = self else { return }
+                    
+                    self.updateCredentials(username: username, shouldStore: request.amarzenarLogin)
+                    
+                    let response = Login.Autenticacao.Resposta(error: nil)
+                    self.presenter.authenticationCompleted(response: response)
+                }
+            }
+        }
+    }
+    
+    func register(request: Login.Autenticacao.Solicitar) {
+        guard let username = request.usuarionome , let password = request.senha else {
+            let response = Login.Autenticacao.Resposta(error: .missingCredentials)
+            presenter.authenticationCompleted(response: response)
+            return
+        }
+        
+        guard let hashedPasssword = Crypto.hash(message: password) else {
+            fatalError("Unable to hash password")
+        }
+        
+        let requestModel = UserRequestModel(username: username, password: hashedPasssword)
+        usersService.create(requestModel) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    let response = Login.Autenticacao.Resposta(error: .loginFailed(error.localizedDescription))
+                    self?.presenter.authenticationCompleted(response: response)
+                    
+                case .success(let resourceId):
+                    print("Created user: \(resourceId)")
+                    guard let self = self else { return }
+                    
+                    self.updateCredentials(username: username, shouldStore: request.amarzenarLogin)
+                    
+                    let response = Login.Autenticacao.Resposta(error: nil)
+                    self.presenter.authenticationCompleted(response: response)
+                }
+            }
+        }
+    }
+    
+    private func updateCredentials(username: String, shouldStore: Bool) {
+        keychain.username = shouldStore ? username : nil
+        userDefaults.rememberUsername = shouldStore
+    }
 }
